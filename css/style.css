@@ -1,0 +1,181 @@
+body {
+  font-family: 'Cairo', Arial, sans-serif;
+  background-color: #fefefe;
+  color: #2e3d3f;
+  direction: rtl;
+  overflow-x: hidden;
+}
+
+.bg-dark-green {
+  background-color: #1f3f3f !important;
+}
+
+.text-dark-green {
+  color: #1f3f3f !important;
+}
+
+.bg-light-green {
+  background-color: #f4f9f4 !important;
+}
+
+.section-alt-bg {
+  background-color: #fff8f0;
+}
+
+.navbar {
+  border-bottom: 2px solid #e1decf;
+}
+
+.navbar-brand, .nav-link {
+  color: #fff !important;
+}
+
+.nav-link:hover, .nav-link.active {
+  color: #ffcc00 !important;
+}
+
+.hero-section {
+  background: linear-gradient(to left, #fceabb, #f8f9f9);
+  min-height: 440px;
+  position: relative;
+}
+
+.hero-text {
+  font-size: 2.8rem;
+  font-weight: bold;
+  color: #1f3f3f;
+}
+
+.car-animation {
+  position: relative;
+  height: 100px;
+  margin-top: 40px;
+  overflow: hidden;
+}
+
+.car {
+  position: absolute;
+  bottom: 10px;
+  right: -120px;
+  animation: drive 6s linear infinite;
+}
+
+.car-icon {
+  font-size: 4rem;
+  color: #ffcc00;
+  text-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+}
+
+@keyframes drive {
+  0% { right: -120px; }
+  100% { right: 100%; }
+}
+
+.text-highlight {
+  font-weight: bold;
+  font-size: 1.2rem;
+  position: relative;
+  color: #1f3f3f;
+}
+
+.text-highlight.with-line::after {
+  content: '';
+  position: absolute;
+  width: 60%;
+  height: 3px;
+  background: linear-gradient(to right, #ffcc00, #28a745);
+  bottom: -8px;
+  left: 50%;
+  transform: translateX(-50%);
+  animation: colorLine 2s infinite alternate;
+}
+
+@keyframes colorLine {
+  0% { width: 0%; background-color: #ffcc00; }
+  100% { width: 60%; background-color: #28a745; }
+}
+
+.footer {
+  background: #1f3f3f;
+  color: #fff;
+  font-size: 1.1rem;
+  position: relative;
+  overflow: hidden;
+}
+
+.footer::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  height: 100%;
+  width: 200%;
+  background: linear-gradient(45deg, rgba(255, 223, 128, 0.2), rgba(255, 223, 128, 0));
+  animation: shine 5s linear infinite;
+}
+
+@keyframes shine {
+  0% { left: -100%; }
+  100% { left: 100%; }
+}
+
+.footer a {
+  color: #ffdf80;
+  transition: color 0.3s ease;
+}
+
+.footer a:hover {
+  color: #ffffff;
+}
+
+@media (max-width: 767px) {
+  .hero-text {
+    font-size: 1.8rem;
+  }
+
+  .text-highlight {
+    font-size: 1rem;
+  }
+
+  .car-icon {
+    font-size: 2.5rem;
+  }
+}
+@media (max-width: 767px) {
+  #services img {
+    max-width: 80%;
+    height: auto;
+  }
+
+  #services .col-md-4,
+  #services .col-md-6 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+}
+@media (max-width: 767px) {
+  .hero-section {
+    min-height: 300px; /* تقليل الارتفاع */
+    padding-top: 40px;
+    padding-bottom: 40px;
+  }
+
+  .car-animation {
+    height: 60px; /* تقليل ارتفاع مساحة السيارة */
+    margin-top: 20px;
+  }
+}
+#services .col-md-6 img {
+  max-width: 80%;
+  height: auto;
+  margin: 0 auto 15px auto; /* مركز الصورة وأسفلها مسافة */
+}
+@media (min-width: 768px) {
+  #services .col-md-6 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+     /* مسافة جانبية صغيرة */
+  }
+}
